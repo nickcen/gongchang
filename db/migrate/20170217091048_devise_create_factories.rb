@@ -31,6 +31,10 @@ class DeviseCreateFactories < ActiveRecord::Migration[5.0]
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
+      t.string :name
+      t.string :tel
+      t.boolean :status, default: false
+
 
       t.timestamps null: false
     end

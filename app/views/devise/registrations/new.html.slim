@@ -4,6 +4,8 @@ h2
   = f.error_notification
   .form-inputs
     = f.input :mobile, required: true, autofocus: true
+    = f.input :name, required: true
+    = f.input :tel, required: true
     = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
     = f.input :password_confirmation, required: true
   .form-actions
