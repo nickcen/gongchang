@@ -4,6 +4,8 @@ class Factory < ApplicationRecord
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :orders
+
   def email_required?
     false
   end

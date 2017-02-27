@@ -2,9 +2,13 @@ doctype html
 html
   head
     title
-      | Gongchang
+      | 工厂
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    = yield
+    = render "layouts/menu"
+
+    .container#container
+      = bootstrap_flash
+      = yield
